@@ -1,7 +1,7 @@
-Da 1 - 29 de marzo de 2026
+# Da 1 - 29 de marzo de 2026
 
 ==========================================================================================================
-Comandos Linux aprendidos hoy:
+# Comandos Linux aprendidos hoy:
 
 whoami : ver usuario actual
 id : muestra a que grupo estamos
@@ -24,12 +24,12 @@ cd : cambiar de carpeta o directorio mediante ruta absoluta o relativa
  - cd - : cambia al directorio ultimo que ingresaste, no importa si su ubicacion es muy disitnta, es como un cambio de A a B y B a A si lo haces de nuevo
 
 ==========================================================================================================
-Comandos Atajos de Teclado:
+# Comandos Atajos de Teclado:
 
 Control + l : limpia la pantalla sin borrar la linea de comando que estas escribiendo
 
 ==========================================================================================================
-Terminos nuevos:
+# Terminos nuevos:
 
 input: termino para referirse a cualquier dato que se le proporciona a un programa para que lo procese.
  - stdin: es el canal por el cual un programa recibe datos de entrada, ya sea desde el teclado, un archivo o la salida de otro comando
@@ -38,14 +38,12 @@ ouput: termino general para cualquier salida de un programa, es comun que se ref
  - stdout: se refiere a la salida estandar de un programa o comando (el resultado que sale)
  - stderr: "       "      "     " de un ERROR al ejecutar un comando (el resultado que sale)
 
-
 ==========================================================================================================
-Dificultades del dia: 
+# Dificultades del dia: 
 No saber como comenzar y ser muy procrastinador, soy el tipico metodo de si o si necesito leer un guia 
 o tener un plan de pasos a pasos, justo me encontre video de S4vitar y me resulto bien, osea hay cosas detalladas al 
 principio que no entendi pero lo esencial de los comandos y otras cosas relacionada a esos comandos si fue util
 ==========================================================================================================
-
-Lo que aprendi que no esperaba:
+# Lo que aprendi que no esperaba:
 que tendria que investigar y aprender terminos nuevos para entender su explicacion, y eso para alguien como yo que no
 sabe nada y es mucho de enrollarse en eso es un fastidio literal 10 minutos para buscar y entender terminos de palabras nuevas
