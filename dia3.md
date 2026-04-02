@@ -50,10 +50,6 @@ vi "nombre_archivo" : abre el editor de texto vi y crear o edita un archivo con 
             - (q) : para salir del editor de texto vi
             - (wq) : para guardar el archivo y salir del editor de texto vi
 
-Lectura de Permisos: 
-
-
-
 
 ==========================================================================================================
 # Comandos Atajos de Teclado:
@@ -66,10 +62,6 @@ Lectura de Permisos:
 
 ==========================================================================================================
 # Dificultades del dia: 
-No saber como comenzar y ser muy procrastinador, soy el tipico metodo de si o si necesito leer un guia 
-o tener un plan de pasos a pasos, justo me encontre video de S4vitar y me resulto bien, osea hay cosas detalladas al 
-principio que no entendi pero lo esencial de los comandos y otras cosas relacionada a esos comandos si fue util
+
 ==========================================================================================================
 # Lo que aprendi que no esperaba:
-que tendria que investigar y aprender terminos nuevos para entender su explicacion, y eso para alguien como yo que no
-sabe nada y es mucho de enrollarse en eso es un fastidio literal 10 minutos para buscar y entender terminos de palabras nuevas
