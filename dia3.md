@@ -20,7 +20,7 @@ echo $? : muestra el resultado del ultimo comando ejecutado, si el resultado es 
           si es diferente de 0 significa que hubo un error al ejecutar el comando, es como una forma de verificar si un comando se ejecuto correctamente o no
 
 touch: comando para crear un archivo vacio o actualizar la fecha de modificacion de un archivo existente, por ejemplo: "touch archivo.txt" crea un archivo llamado "archivo.txt"
-       si no existe o actualiza la fecha de modificacion si ya existe, OJO (funcioanan mas para archivos de texto plano)
+       si no existe o actualiza la fecha de modificacion si ya existe, OJO (funcionan mas para archivos de texto plano)
 
 echo "texto" > archivo.txt : comando para escribir texto en un archivo, si el archivo no existe lo crea, si el archivo existe lo sobreescribe
   ----> por ejemplo: (echo "Hola Mundo" > archivo.txt) escribe "Hola Mundo" en el archivo archivo.txt
