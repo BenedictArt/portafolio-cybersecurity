@@ -12,9 +12,7 @@ Concatenar Comandos: Escribir varios comandos en una sola linea.
       es como una cadena de comandos que dependen del resultado del anterior
 
     - Uso de "||" para ejecutar varios comandos en una sola linea pero solo si el comando anterior tuvo error, es como escribir un comando y luego otro pero el segundo solo se
-      ejecuta si el primero tuvo un error al ejecutarse, por ejemplo: "whoami || ls" ejecuta ambos comandos uno tras otro pero el segundo solo se ejecuta si el primero tuvo un error al ejecutarse,
-      si son 3 comandos por ejemplo "whoami || ls || pwd" el segundo comando se ejecuta solo si el primero tuvo un error al ejecutarse y el tercero solo si el segundo tuvo un error al ejecutarse, 
-      es como una cadena de comandos que dependen del resultado del anterior pero en este caso dependen de que el anterior tenga un error al ejecutarse
+      ejecuta si el primero tuvo un error al ejecutarse, por ejemplo: "whoami || ls" ejecuta ambos comandos uno tras otro pero el segundo solo se ejecuta si el primero tuvo un error al ejecutarse, si son 3 comandos por ejemplo "whoami || ls || pwd" el segundo comando se ejecuta solo si el primero tuvo un error al ejecutarse y el tercero solo si el segundo tuvo un error al ejecutarse, es como una cadena de comandos que dependen del resultado del anterior pero en este caso dependen de que el anterior tenga un error al ejecutarse
 
 echo $? : muestra el resultado del ultimo comando ejecutado, si el resultado es 0 significa que el comando se ejecuto correctamente, 
           si es diferente de 0 significa que hubo un error al ejecutar el comando, es como una forma de verificar si un comando se ejecuto correctamente o no

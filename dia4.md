@@ -55,13 +55,70 @@ chmod : Permite cambiar los permisos de acceso a archivos y directorios
             - (chmod a=rx nombreA) : todos tiene solo lectura y ejecucion ===>   dr-xr-xr-x 2 kali kali 4096 Apr  3 23:09 nombreA
             - (chmod u=x nombreA)  : el usuario(propietario) solo puede ejecutar ===>   d--xrwxr-x 2 kali kali 4096 Apr  3 23:09 nombreA  
 
+
+chgrp : Permite cambiar el grupo a archivos o directorios, OJO (solo si eres Propietario y perteneces al grupo nuevo que va a reemplazar al viejo)
+    --->  Ejemplo: drwxrwxr-x 2 root root 4096 Apr  3 23:09 nombreA
+            - (chgrp kali nombreA) : cambia el grupo root por el grupo kali ===>   drwxr-xr-x 2 root kali 4096 Apr  3 23:09 nombreA      
+
+
+useradd: Sirve para crear un nuevo Usuario en el Sistema    OJO(solo lo puede hacer el root y los que puedan usar "sudo")
+      ejemplo:
+        - (useradd Persi) : crea el usuario Persi (por defecto sin contraseña)
+        Dato Rpido : puedes crear el usuario con especificaciones para hacerlo mas rapido
+        - (useradd Persi -s /bin/bash -d /home/Persi)
+            -> "-s" : especifica el SHELL de inicio de sesion del Usuario (en este caso /bin/bash)
+            -> "-d" : especifica el directorio personal del Usuario (en este caso /home/Persi)    ==> "yo ya cree el directorio "Persi" dentro de home
+                      --> en caso de no existir el directorio que quieras asignar, lo puedes crear ahi mismo con "-m"
+                      --> EJEMPLO (useradd Persi -s /bin/bash -d /home/Persi -m)  
+            
+
+passwd : Se utiliza para cambiar la contraseña de un Usuario o del actual
+        ejemplo:
+          - (passwd) : sirve solo para cambiar o crear la contraseña del usuario actual, te pedira una vez confirmar la contraseña nueva
+          - (passwd Persi) : crea una contraseña (si no tiene) o cambia la contraseña del usuario "Persi", en este caso si estas en Root
+          - (sudo passwd Persi) : lo mismo pero para quienes tengan el privilegio de sudo 
+
+
+chown : Sirve para cambiar el Usuario(Propietario) de un archivo o directorio    ...OJO(solo lo puede hacer el root y los que puedan usar "sudo")
+        ejemplo: drwxrwxr-x 2 root root 4096 Apr  3 23:09 nombreA
+          - (chown Persi nombreA) : cambia el usuario root por el usuario Persi ===>   drwxr-xr-x 2 Persi root 4096 Apr  3 23:09 nombreA
+          Dato Rpido : si no quieres hacer chgrp para cambiar de grupo y luego usar chown para cambiar usuario, puede usar "chown" para hacerlo junto
+          - (chown Persi:kali nombreA) : establece como propietario a "Persi" y a grupo "kali" ===>   drwxr-xr-x 2 Persi kali 4096 Apr  3 23:09 nombreA  
+
+
+groupadd : Crea grupos de Usuarios        ...OJO(solo lo puede hacer el root y los que puedan usar "sudo")
+          ejemplo --> (groupadd Alumnos) : crea un grupo vacio con el nombre "Alumnos"
+
+usermod : Modifica los atributos de un usuario existente en el sistema    ...OJO(solo lo puede hacer el root y los que puedan usar "sudo")
+          puede cambiar (grupos,directorio home, shell, nombre de usuario, UID) en este caso mostrare las 4 primeras
+          + Para Asignar un Usuario a un grupo   
+             Ejemplo (usermod -a -G Alumnos Persi) : Se añadio el Usuario Persi al grupo Alumnos
+                 - "-a" : para añadir un usuario(Persi) a un grupo sin eliminarlo de otros grupos al que ya pertenece [funciona solo en combiancion con "-G"]
+                 - "-G" : para especificar una lista de grupos(Alumnos) adicionales al que se añadira el Usuario(Persi) [sin "-a", se borra el usuario de otros grupos, 
+                          menos este nuevo que se añadio]
+          + Para cambiar la shell del Usuario : (usermod -s /bin/bash Persi)
+          + Para cambiar el directorio Personal : (usermod -d /home/nuevo Persi)   
+          + Para cambiar el nombre al Usuario : (usermod -l nuevoNombre Persi)     
+
  
 
 
 
 ==========================================================================================================
-# Comandos Atajos de Teclado:
+# Cosas nuevas que Aprendi:
 
+cat /etc/passwd : es un archivo del sistema que almacena la información básica de todos los usuarios creados en el sisteam, incluyendo su identificador (UID), grupo (GID),
+                  directorio personal y el intérprete de comandos (shell) que utilizan
+              
+              Ejemplo: (cat /etc/passwd | grep "Persi") muestra solo la informacion del Usuario Persi porque filtramos por nombre "Persi"
+                  - Persi:x:1001:1001::/home/Persi:/bin/bash
+                    - nombre de Usuario : Persi
+                    - contraseña : x "oculta obviamente"
+                    - ID : 1001
+                    - GUID(Grupo) : 1001
+                    - descripcion : aca no se pero esta vacion xd, es lo que deberia estar entre "::" 
+                    - carpeta personal : /home/Persi
+                    - shell : /bin/bash
 
 
 ==========================================================================================================
